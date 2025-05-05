@@ -1,0 +1,44 @@
+{
+
+
+    "masters" : {
+        "masters_host" : ":1788",
+        "masters_config_maxauthtries" : 3
+    },
+
+    "database" : {
+        "sql_host" : "localhost:3306",
+        "sql_username" : "root",
+        "sql_password" : "As7822981!",
+        "sql_name" : "hrl"
+    },
+
+    "app_config" : {
+        "app_name" : "BlackFire",
+        "app_sig_colour" : "[38;5;204m"
+    },
+
+    "Disabled_commands" : [
+        "commandtodisable"
+    ],
+
+
+    "Extra" : {
+        "TableType" : "lite",
+        "TitleSpinner" : true,
+        "TitleSpinnerFrames" : ["/", "\\"],
+        "DefaultColours" : "[0m"
+    },
+
+
+    "User_Defaults" : {
+        "Admin" : false, 
+        "Reseller" : false,
+        "VIP" : false, 
+        "Banned" : false, 
+        "MaxSessions" : 1, 
+        "PowerSavingExempt" : false, 
+        "BypassBlacklist" : false,
+        "DefaultDays" : 30
+    }
+}

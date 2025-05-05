@@ -1,0 +1,18 @@
+name=h
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+-----------------------------------------------------------              
+                    \x1b[93m①  \x1b[91mmethods \x1b[97m攻击模式                
+                    \x1b[93m②  \x1b[91mongoing \x1b[97m任务进程                
+                    \x1b[93m③  \x1b[91mpasswd  \x1b[97m更改密码                
+                    \x1b[93m④  \x1b[91mplan    \x1b[97m套餐内容                
+                    \x1b[93m⑤  \x1b[91mcls     \x1b[97m清屏                   
+                    \x1b[93m⑥  \x1b[91mctrl+c  \x1b[97m结束      
+-----------------------------------------------------------              
+\x1b[97m   输入上方指令回车 查看对应内容，输入\x1b[32m H \x1b[97m回车 重返该页面
+    
+         

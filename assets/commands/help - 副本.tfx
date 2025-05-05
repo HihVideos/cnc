@@ -1,0 +1,17 @@
+name=h
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+
+\x1b[91m                  ╔═════════════════════════════════════════╗
+\x1b[91m                  ║  \x1b[97mmethods      > 攻击模式                \x1b[91m║
+\x1b[91m                  ║  \x1b[97mongoing      > 攻击列表                \x1b[91m║
+\x1b[91m                  ║  \x1b[97mpasswd       > 更改密码                \x1b[91m║
+\x1b[91m                  ║  \x1b[97mplan         > 套餐内容                \x1b[91m║
+\x1b[91m                  ║  \x1b[97mcls          > 清屏                    \x1b[91m║
+\x1b[91m                  ║  \x1b[97mctrl+c       > 结束                    \x1b[91m║
+\x1b[91m                  ╚═════════════════════════════════════════╝
+

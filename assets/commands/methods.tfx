@@ -1,0 +1,48 @@
+name=methods
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+\x1b[90m---------------------------------------------------------------------------------------------------------------
+\x1b[97m[\x1b[91m 网站模式 | Web | L7 ✩ HTTP \x1b[97m]
+  \x1b[93m http            \x1b[97mhttp/1 BrowserRequest Flood攻击 仅支持HTTP站点 不能用于HTTPS
+  \x1b[93m httpmix         \x1b[97mhttp/1/2 该模式兼容HTTP(默认80端口)与https(默认443端口)的站点攻击
+  \x1b[93m prx             \x1b[97mhttp/1/2 该模式使用高并发的随机参数 + 慢速绕过 +RST漏洞攻击 针对非Cloudfare站点
+  \x1b[93m cloud           \x1b[97mhttp/1/2 此模式针对除了CF防御外的所有站点
+  \x1b[93m god             \x1b[97mhttp/1/2 可绕过Cloudflare HTTPDDOS、Cloudflare PRO、Cloudflare BUSINESS
+
+\x1b[97m[\x1b[91m 网站模式 | Web | L7 ✩ HTTPS \x1b[97m]
+  \x1b[93m httpmix         \x1b[97mhttp/1/2 该模式兼容HTTP(默认80端口)与https(默认443端口)的站点攻击
+  \x1b[92m tls             \x1b[97mhttp/2  TLS Flood + Session + Request 占用式攻击 自动匹配TLS版本
+  \x1b[93m https           \x1b[97mhttp/2 洪水攻击 + RST STREAM (CVE-2023-44487)漏洞攻击，可绕过Cloudfare
+  \x1b[93m browser         \x1b[97mhttp/2 浏览器攻击 + 模拟chrome + 模拟Firefox + 模拟真实用户浏览器攻击
+  \x1b[93m cpu             \x1b[97mhttp/1 + http/2 + 随机User-Agent + 缓存投毒绕过Cloudflare等CDN消耗服务器的CPU使用率
+  \x1b[93m prx             \x1b[97mhttp/1/2 该模式使用高并发的随机参数 + 慢速绕过 +RST漏洞攻击 针对非Cloudfare站点
+  \x1b[93m ja3             \x1b[97mhttp/2 使用ja3指纹获取响应cookie并保存，发动带指纹的cookie攻击
+  \x1b[93m cloud           \x1b[97mhttp/1/2 此模式针对除了CF防御外的所有站点
+  \x1b[93m god             \x1b[97mhttp/1/2 极速绕过Cloudflare HTTPDDOS、Cloudflare PRO、Cloudflare BUSINESS
+  \x1b[93m gaga            \x1b[97mhttp/1/2 全新谷歌浏览器绕过Cloudflare点击盾、绕过验证码、速度慢，建议攻击200秒以上
+
+\x1b[97m[\x1b[91m 服务器模式 | IPV4 | L4 | ✩ TCP \x1b[97m]
+  \x1b[93m tcpdd           \x1b[97mTCP SYN + RST 攻击
+  \x1b[92m proxy           \x1b[97mTCP SYN + PSH + PIN HTTPS + SOCKS 代理攻击
+  \x1b[93m mdtcp           \x1b[97m使用Middlebox 进行 TCP SYN 放大攻击
+  \x1b[92m rst             \x1b[97mTCP RST 攻击
+  \x1b[93m syn             \x1b[97mTCP真实选项 + 随机MSS + 脉冲式SYN标志洪水攻击
+  \x1b[93m ack             \x1b[97m自定义Ack发包窗体洪水攻击
+  \x1b[92m ovh             \x1b[97mTCP协议 + RAW + 使用socks5代理模拟三次握手 (SYN, SYN-ACK,ACK,PSH)
+  \x1b[93m windows         \x1b[97m利用C&R 进行 TCP Cookie 洪水攻击 + 随机窗口+ 分子重置 + ACK攻击 + RX漏洞攻击
+
+\x1b[97m[\x1b[91m 服务器模式 | IPV4 | L4 | ✩ UDP \x1b[97m]
+  \x1b[93m ntpx            \x1b[97mNTP放大攻击
+  \x1b[93m dnsx            \x1b[97mDNS放大攻击 + 中包 + 原始长度
+  \x1b[92m udprand         \x1b[97mUDP自定义包 + 分片攻击
+  \x1b[92m memc            \x1b[97mMemc放大攻击
+\x1b[90m---------------------------------------------------------------------------------------------------------------
+\x1b[94m1.示例：windows 8.8.8.8 443 100
+\x1b[94m2.打网站的，HTTP站点使用HTTP模式，HTTPS站点用HTTPS模式.
+\x1b[93m3.黄色模式代表支持使用中国量进行攻击，命令结尾输入空格 --cn
+\x1b[94m4.攻击程序一旦启动后\x1b[91m无法停止.
+ 

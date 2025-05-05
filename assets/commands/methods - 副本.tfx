@@ -1,0 +1,56 @@
+name=methods
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+
+\x1b[93m使用例子：https https://www.google.com 443 60
+\x1b[90m---------------------------------------------------------------------------------------------------------------
+\x1b[97m[\x1b[91m 网站模式 | Web | L7 ✩ HTTP \x1b[97m]
+  \x1b[92m http            \x1b[97mhttp/1 BrowserRequest Flood攻击 仅支持HTTP站点 不能用于HTTPS
+  \x1b[92m httpmix         \x1b[97mhttp/1/2 该模式兼容HTTP(默认80端口)与https(默认443端口)的站点攻击
+  \x1b[92m prx             \x1b[97mhttp/1/2 该模式使用高并发的随机参数 + 慢速绕过 +RST漏洞攻击 针对非Cloudfare站点
+  \x1b[92m cloud           \x1b[97mhttp/1/2 此模式针对除了CF防御外的所有站点
+
+\x1b[97m[\x1b[91m 网站模式 | Web | L7 ✩ HTTPS \x1b[97m]
+  \x1b[92m httpmix         \x1b[97mhttp/1/2 该模式兼容HTTP(默认80端口)与https(默认443端口)的站点攻击
+  \x1b[92m tls             \x1b[97mhttp/2  TLS Flood + Session + Request 占用式攻击 自动匹配TLS版本
+  \x1b[92m bstls           \x1b[97mhttp/2  使用虚假 TLS 对 User Agents, Referrers, Headers 进行Flood攻击
+  \x1b[92m https           \x1b[97mhttp/2 洪水攻击 + RST STREAM (CVE-2023-44487)漏洞攻击，可绕过Cloudfare
+  \x1b[92m browser         \x1b[97mhttp/2 浏览器攻击 + 模拟chrome + 模拟Firefox + 模拟真实用户浏览器攻击
+  \x1b[92m cpu             \x1b[97mhttp/1 + http/2 + 随机User-Agent + 缓存投毒绕过Cloudflare等CDN消耗服务器的CPU使用率
+  \x1b[92m ram             \x1b[97m使用GET、POST、HEAD、PUT、DELETE、CONNECT、OPTIONS、TRACE、PATCH + 随机User-Agent + 加密套件多方法混合攻击
+  \x1b[92m httpsfc         \x1b[97mhttp/2 + TLS + 规范请求标题 + 模拟Firefox 混合攻击 针对非Cloudflare的部分CDN站点
+  \x1b[92m prx             \x1b[97mhttp/1/2 该模式使用高并发的随机参数 + 慢速绕过 +RST漏洞攻击 针对非Cloudfare站点
+  \x1b[92m ja3             \x1b[97mhttp/2 使用ja3指纹获取响应cookie并保存，发动带指纹的cookie攻击
+  \x1b[92m cloud           \x1b[97mhttp/1/2 此模式针对除了CF防御外的所有站点
+
+\x1b[97m[\x1b[91m 服务器模式 | IPV4 | L4 | ✩ TCP \x1b[97m]
+  \x1b[92m tcpdd           \x1b[97mTCP SYN + RST 攻击
+  \x1b[92m tcpcn           \x1b[97m用于攻击封海外目标的RST攻击
+  \x1b[92m synw            \x1b[97mTCP syn伪造攻击，同时发送CWR、ECE标志位攻击
+  \x1b[92m synb            \x1b[97m使用Middlebox 进行 SYN 代理攻击
+  \x1b[92m ackw            \x1b[97mack伪造攻击，同时发送CWR、ECE标志位攻击
+  \x1b[92m rand            \x1b[97mTCP网络层防火墙攻击 
+  \x1b[92m ovh             \x1b[97mTCP协议 + RAW + 使用socks5代理模拟三次握手 (SYN, SYN-ACK,ACK,PSH)
+  \x1b[92m sips            \x1b[97mTCP + SACK协议 + 大量路由IPS + Cloudflare IPS 发起的TCP攻击
+  \x1b[92m windows         \x1b[97m利用C&R 进行 TCP Cookie 洪水攻击 + 窗口重置 + ACK攻击 + RX漏洞攻击
+
+\x1b[97m[\x1b[91m 服务器模式 | IPV4 | L4 | ✩ UDP \x1b[97m]
+  \x1b[92m rc              \x1b[97m使用REST架构发起COAP协议的UDP攻击
+  \x1b[92m amp             \x1b[97mCIDR反射 + 原始发包 + 随机源端口 + 网段 UDP攻击
+  \x1b[92m dns             \x1b[97mDNS 放大攻击 + 大包发送 + 原始长度 UDP
+  \x1b[92m udpw            \x1b[97mDNS 发动原始UDP伪造攻击
+  \x1b[92m udpg            \x1b[97m此UDP攻击主要针对游戏服务器
+  \x1b[92m udpp            \x1b[97mSOCKS5代理 + WS-DY反射 + 随机UDP大数据包 + 随机字符串攻击 
+  \x1b[92m udpm            \x1b[97m利用Valve漏洞的 UDP 放大攻击 + UPnP 漏洞放大攻击
+  \x1b[92m udpf            \x1b[97m此模式主要针对GTA5游戏平台Fivem的服务器进行攻击，只能针对GTA5游戏
+\x1b[90m---------------------------------------------------------------------------------------------------------------
+
+\x1b[94m1.打网站的，HTTP站点使用HTTP模式，HTTPS站点用HTTPS模式.
+\x1b[94m2.打IP的，TCP的就打TCP模式，UDP就打UDP模式.
+\x1b[94m3.udp或者tcp端口查询是否开放方法：udp/tcp ip 端口  例：tcp 8.8.8.8 443
+\x1b[94m4.攻击程序一旦启动后\x1b[91m无法停止.
+

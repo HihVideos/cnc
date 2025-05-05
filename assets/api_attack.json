@@ -1,0 +1,351 @@
+{
+
+    "methods" : [
+        
+        {
+            "api_name" : "funnel",
+            "target" : "https://www.cloudflare.com/",
+            "urlEncode" : true,
+            "attack_methods" : ["tls"],
+
+            "custom_define" : [
+                
+                {
+                    "method" : "tls",
+                    "description" : "tls attack",
+
+                    "default_port" : 443,
+                    "vip_method" : true
+                }
+            ]
+        },
+
+        {
+            "api_name" : "http",
+            "target" : "https://www.cloudflare.com/",
+            "urlEncode" : true,
+            "attack_methods" : ["http"],
+
+            "custom_define" : [
+                
+                {
+                    "method" : "http",
+                    "description" : "simple http",
+
+                    "default_port" : 80,
+                    "vip_method" : true
+                }
+            ]
+        },
+
+
+
+        {
+            "api_name": "https",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["https"], 
+            "custom_define": [
+                {
+                    "method": "https",
+                    "description": "执行 Node.js 脚本",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "cpu",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["cpu"], 
+            "custom_define": [
+                {
+                    "method": "cpu",
+                    "description": "cpu",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "browser",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["browser"], 
+            "custom_define": [
+                {
+                    "method": "browser",
+                    "description": "flooder",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "httpmix",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["httpmix"], 
+            "custom_define": [
+                {
+                    "method": "httpmix",
+                    "description": "flooder",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "ovh",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["ovh"], 
+            "custom_define": [
+                {
+                    "method": "ovh",
+                    "description": "ovh",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+
+        {
+            "api_name": "syn",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["syn"], 
+            "custom_define": [
+                {
+                    "method": "syn",
+                    "description": "syn",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        
+
+        {
+            "api_name": "tcpdd",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["tcpdd"], 
+            "custom_define": [
+                {
+                    "method": "tcpdd",
+                    "description": "tcpdd",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        
+
+        {
+            "api_name": "windows",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["windows"], 
+            "custom_define": [
+                {
+                    "method": "windows",
+                    "description": "windows",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "prx",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["prx"], 
+            "custom_define": [
+                {
+                    "method": "prx",
+                    "description": "prx",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+
+        {
+            "api_name": "udprand",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["udprand"], 
+            "custom_define": [
+                {
+                    "method": "udprand",
+                    "description": "udprand",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "ja3",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["ja3"], 
+            "custom_define": [
+                {
+                    "method": "ja3",
+                    "description": "ja3",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "cloud",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["cloud"], 
+            "custom_define": [
+                {
+                    "method": "cloud",
+                    "description": "cloud",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "god",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["god"], 
+            "custom_define": [
+                {
+                    "method": "god",
+                    "description": "god",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "ack",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["ack"], 
+            "custom_define": [
+                {
+                    "method": "ack",
+                    "description": "ack",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "ntpx",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["ntpx"], 
+            "custom_define": [
+                {
+                    "method": "ntpx",
+                    "description": "ntpx",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "dnsx",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["dnsx"], 
+            "custom_define": [
+                {
+                    "method": "dnsx",
+                    "description": "dnsx",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "gaga",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["gaga"], 
+            "custom_define": [
+                {
+                    "method": "gaga",
+                    "description": "gaga",
+                    "default_port": 443, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "rst",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["rst"], 
+            "custom_define": [
+                {
+                    "method": "rst",
+                    "description": "rst",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "mdtcp",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["mdtcp"], 
+            "custom_define": [
+                {
+                    "method": "mdtcp",
+                    "description": "mdtcp",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        },
+
+        {
+            "api_name": "proxy",
+            "target": "https://www.cloudflare.com/", 
+            "urlEncode": true, 
+            "attack_methods": ["proxy"], 
+            "custom_define": [
+                {
+                    "method": "proxy",
+                    "description": "proxy",
+                    "default_port": 80, 
+                    "vip_method": true 
+                }
+            ]
+        }
+
+
+    ]
+}
